@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+$accent: #ffb2ff;
+$bg: #121212;
+$highlight: #292929;
+
+$highemphasis: 0.87;
+$mediumemphasis: 0.6;
+$disabled: 0.38;
+
+$content-width: 1000px;
+
+:global(body) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    background-color: $bg;
+    color: white;
+}
+
+:global(h1, h2, h3, h4, h5, p, span, a) {
+    opacity: $highemphasis;
+}
+
+:global(a) {
+    color: $accent;
+}
+
+:global(a:visited) {
+    color: $accent;
+}
+
+:global(*)::selection {
+    background-color: $accent;
+}
