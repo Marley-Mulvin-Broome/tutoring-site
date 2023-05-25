@@ -6,7 +6,16 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: azure(),
+		adapter: azure({
+			customStaticWebAppConfig: {
+				routes: [
+					{
+						"route": "/hire",
+						methods: ["GET", "POST"]
+					},
+				]
+			}
+		}),
 	}
 };
 
