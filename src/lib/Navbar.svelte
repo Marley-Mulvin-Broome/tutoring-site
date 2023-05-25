@@ -7,6 +7,9 @@
   $: routeId = $page.route.id;
 </script>
 
+<title>Marley - {pages.find((page) => {page.path === routeId})?.name ?? "Tutoring"}</title>
+
+
 <nav>
   {#each pages as page}
     <a class={routeId === page.path ? "selected" : ""} href={page.path}

@@ -1,11 +1,7 @@
 <script lang="ts">
   import Footer from "$lib/Footer.svelte";
   import Navbar from "$lib/Navbar.svelte";
-  import { fade } from "svelte/transition";
-    import LoadingBar from "$lib/LoadingBar.svelte";
-
-  import '$lib/localisation/localisation.ts';
-
+  
   const navPages = [
     {
       name: "Home",
