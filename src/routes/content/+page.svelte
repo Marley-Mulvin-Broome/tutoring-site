@@ -1,11 +1,20 @@
+<script>
+
+    import { fade } from "svelte/transition";
+
+</script>
 <!-- path: /content -->
 
-<h1>Matierals</h1>
+<div in:fade>
+    <h1>Under construction</h1>
+    <p>Come back later!</p>
+</div>
 
-<p>Here you can find all the materials for my tutoring, and beyond!</p>
-
-<ul>
-    <li>High School Japanese</li>
-    <li>JLPT</li>
-    <li>All</li>
-</ul>
+<style lang="scss">
+    div {
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+</style>

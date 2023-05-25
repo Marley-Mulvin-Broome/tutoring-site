@@ -1,0 +1,29 @@
+@use "./Global.scss";
+
+@keyframes dotShine {
+    0% {
+        background-color: Global.$accent;
+    }
+    100% {
+        background-color: #f9bb35;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        ;
+    }
+}
+
+@mixin baseDot {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: Global.$accent;
+
+    animation: spin 1s linear infinite;
+}

@@ -28,6 +28,11 @@
     // box shadow at bottom of nav
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 
+    @media screen and (max-width: Global.$content-width) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     a {
       color: Global.$accent;
       text-decoration: none;

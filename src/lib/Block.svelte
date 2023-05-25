@@ -4,6 +4,7 @@
     export let topMargin: string = "0px";
     export let bottomMargin: string = "0px";
     export let bottomPadding: string = "0px";
+    export let hideBottom: boolean = false;
 
     let classString = "";
 
@@ -12,7 +13,7 @@
     }
 </script>
 
-<article style="--space: {space}; --bottomMargin: {bottomMargin}; --topMargin: {topMargin}; --bottomPadding: {bottomPadding};">
+<article class="{hideBottom ? "hide-bottom" : ""}" style="--space: {space}; --bottomMargin: {bottomMargin}; --topMargin: {topMargin}; --bottomPadding: {bottomPadding};">
     <div class={classString}>
         <slot name="header"></slot>
         <slot name="content"></slot>
@@ -23,6 +24,7 @@
     @use './Global.scss';
 
     article {
+        overflow: hidden;
         width: 100%;
         margin-top: var(--topMargin);
         margin-bottom: var(--bottomMargin);
@@ -30,8 +32,20 @@
         padding-top: 10px;
         padding-bottom: calc(10px + var(--bottomPadding));
 
+        @media screen and (min-width: Global.$content-width){
+            div {
+                width: Global.$content-width;
+            }
+        }
+
+        @media screen and (max-width: Global.$content-width){
+            div {
+                width: Global.$small-content-width;
+            }
+        }
+
+
         div {
-            width: Global.$content-width;
             margin: 0 auto;
 
             transition: all 0.5s;
@@ -41,7 +55,7 @@
             margin-bottom: calc(var(--space) + var(--bottomMargin));
         }
 
-        ::after {
+        &:not(.hide-bottom)::after {
             content: "";
             position: absolute;
             height: 1px;
@@ -59,7 +73,7 @@
     article:hover {
         background-color: Global.$highlight;
 
-        ::after {
+        &:not(.hide-bottom)::after {
             width: 10%;
             left: 43%;
 

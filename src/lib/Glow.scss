@@ -1,0 +1,16 @@
+@keyframes ambientGlow {
+    from {
+        box-shadow: -1px 0px 31px 18px rgba(255, 143, 255, 0);
+
+    }
+
+    to {
+        box-shadow: -1px 0px 31px 18px rgba(255, 143, 255, 0.1);
+    }
+}
+
+@keyframes ambientTransition {
+    to {
+        box-shadow: -1px 0px 31px 18px rgba(255, 143, 255, 0.28);
+    }
+}
