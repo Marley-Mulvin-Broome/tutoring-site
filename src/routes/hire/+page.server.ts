@@ -2,7 +2,7 @@ import { supabase } from '$lib/db/supabaseClient.js';
 import { fail, type Actions } from '@sveltejs/kit';
 
 export const actions: Actions = {
-    default: async ({ request }) => {
+    message: async ({ request }) => {
         const formData = await request.formData();
         const email = formData.get('emailAddress');
         const message = formData.get('formMessage');

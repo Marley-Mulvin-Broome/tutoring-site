@@ -7,9 +7,6 @@ const config = {
 
 	kit: {
 		adapter: azure(),
-		methodOverride: {
-            allowed: ['POST']
-        },
 	}
 };
 

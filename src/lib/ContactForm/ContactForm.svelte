@@ -36,7 +36,7 @@
     }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} method="POST">
+<form on:submit|preventDefault={handleSubmit} method="POST" action="?/message">
     {#if form?.success}
         <MessageSent />
     {:else if form?.error}
