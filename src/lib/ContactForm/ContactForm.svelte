@@ -21,7 +21,10 @@
 
         const response = await fetch(this.action, {
             method: 'POST',
-            body: data
+            body: data,
+            headers: {
+                'x-sveltekit-action': 'true'
+            }
         });
 
         const result: ActionResult = deserialize(await response.text());
