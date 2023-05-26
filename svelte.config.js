@@ -10,9 +10,13 @@ const config = {
 			customStaticWebAppConfig: {
 				routes: [
 					{
-						"route": "/hire",
-						methods: ["GET", "POST"]
+						"route": "/hire?/message",
+						methods: ["POST"]
 					},
+					{
+						"route": "/hire",
+						methods: ["POST", "GET"]
+					}
 				]
 			}
 		}),

@@ -42,7 +42,6 @@
         if (!hoverData.has(event.detail.cellText)) return;
 
         itemDescription = hoverData.get(event.detail.cellText) as string;
-        console.log("itemDescription: " + itemDescription)
     }
 </script>
 
