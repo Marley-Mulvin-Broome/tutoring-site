@@ -27,6 +27,6 @@ export const actions: Actions = {
             return fail(500, {error});
         }
 
-        return {success: true }
+        return { success: true }
     }
 } satisfies Actions;

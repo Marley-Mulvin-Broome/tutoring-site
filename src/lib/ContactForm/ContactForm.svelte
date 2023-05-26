@@ -23,7 +23,7 @@
             method: 'POST',
             body: data,
             headers: {
-                'x-sveltekit-action': 'true'
+                'x-sveltekit-action': 'true',
             }
         });
 
@@ -39,7 +39,7 @@
     }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} method="POST" action="?/message">
+<form on:submit|preventDefault={handleSubmit} method="POST" action="/hire?/message">
     {#if form?.success}
         <MessageSent />
     {:else if form?.error}
